@@ -1,0 +1,8 @@
+import React from 'react';
+import Sample from 'SamplePath';
+import renderer from 'react-test-renderer';
+
+test('renders Sample correctly', () => {
+    const tree = renderer.create(<Sample />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
